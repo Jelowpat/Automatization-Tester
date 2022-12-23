@@ -1,9 +1,9 @@
-package Composition;
+package composition;
 
 public class Product {
     private int price;
-    private String productName;
-    private String productManufacturer;
+    private final String productName;
+    private final String productManufacturer;
 
     public Product(int price, String productName, String productManufacturer){
         this.price = price;
@@ -13,8 +13,7 @@ public class Product {
 
     @Override
     public String toString(){
-        String representation = "product name: " + this.productName + " manufacturer: " + this.productManufacturer + " price: " + this.price;
-        return representation;
+        return "product name: " + this.productName + " manufacturer: " + this.productManufacturer + " price: " + this.price;
     }
 
     public void setPrice(int price){

@@ -1,0 +1,65 @@
+
+Dziedzieczenie
+
+1)
+    Napisz klasę Animal oraz dziedziczące po niej klasy: Dog, Fish, Bird.
+    Zadbaj aby każda klasa zawierała pola (wybór odpowiednich typów danych zostawiam Tobie):
+
+    -name
+    -numberOfLegs
+    -numberOfWings
+
+    (wykorzystaj właściwości dziedziczenia aby napisać najbardziej efektywny kod)
+
+    Następnie w klasie Animal zaimplementuj metody:
+
+    -swim()
+    -fly()
+
+    W przypadku gdy zwierzę (Dog,Bird lub Fish) nie potrafi pływać lub latać, w odpowiedniej dla niego klasie dokonaj
+    nadpisania odpowiedniej metody tak aby zwracała komunikat (może go wypisywać do konsoli).
+
+    Stwórz klasę ZOO w której stworzysz instancje klas oraz dokonasz wywołania metod
+
+
+Kompozycja
+
+1)
+
+    Napisz klasę Customer posiadającą pola:
+    -name
+    -surname
+    -clientID
+
+    Napisz klasę Product
+    pola:
+    - price
+    - productName
+    - productManufacturer
+
+    Napisz klasę Order posiadającą pola :
+    - customer - typu Customer
+    - product - typu Product
+    - payed
+    - delivered
+    oraz metode
+    -calculateOrderValue() - zwraca cene z produktu (nalezy w tej metodzie wywolac metode getPrice z produktu i zwrócić wynik)
+
+    ***********************(dla chetnych)*****************************
+
+    Kazde pole tekstowe moze przyjac jedynie 30 znaków - metoda lenght
+
+    String nazwaZmiennejString = "abc"
+    nazwaZmiennejString.lenght() -> zwraca informacje o dlugosc stringa
+
+    *******************************************************************
+
+    Nie powinno byc mozliwosci zmiany id klienta. Ten parametr moze byc ustawiony tylko podczas budowania obiektu kasy Customer
+    Nie ma możliwości zmiany producenta i nazwy produktu
+    Cene produktu mozna zmienic cene tylko na >0
+    Metoda calculateOrderValue() powinna wypelnic pole orderValue w klasie Order
+
+    Możesz mieć więcej metod niż podane. Budujcie je kiedy będą potrzebne z zachowaniem zasady enkapsulacji.
+    Starajmy sie ograniczać dostęp do danych jak tylko to możliwe
+
+    W klasie Main zbudujcie 2 zamówienia dla 2 różnych klientów. Każde z innym produktem
