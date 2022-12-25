@@ -1,0 +1,11 @@
+xPrzygotuj proszę kila testów dla strony logowania w serwisie https://demo.prestashop.com/#/en/front
+
+Mozesz uzyc kodu do przelaczenia adresu www lub przelaczenia do iframe napisanego na lekcji
+
+Zaproponuj przypadki testowe dla ponizszych elementow/funkcji strony
+
+- zaloz konto - dodaj produktu do wishlist i sprawdzenie czy jest widoczny w panleu zalogowanego uzytkownika
+- przefiltrowanie produktow na stronie ART - zastosuj filtr i przesortuj po cenie
+- dokonaj walidacji pol w formularzu nowego klienta
+- dokonaj walidacji pol w formularzu adresu podczas zakupu produktu
+- Wyszukaj element (Mug) za pomoca wyszukiwarki - kliknij Enter - sprawdz czy produkty sa na stronie Search Results

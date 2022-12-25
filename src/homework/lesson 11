@@ -1,0 +1,18 @@
+Napisz następujące testy dla strony https://demo.prestashop.com
+Kożystając z kodu z lekcji, przelącz się do iframe lub przeładuj stronę bez nagłówka
+
+1)
+
+1.Przejdz do strony Contact-us
+2.Wypelnij formularz kontaktowy - wszystkie pola za wyjatkiem dodawania plikow - Aby wpisać tekst użyj metody .sendKeys("abc") która jest dostępna po znalezieniu elementu
+3.Wyslij formularz
+
+3)
+
+Warunki początkowe : załóż nowe konto
+
+Test
+1.Zaloguj sie na istniejace juz konto
+2.Dokonaj zakupu jednej rzeczy
+3.Przejdz przez proces zamowienia - there is a problem on the site's side
+4.Sprawdź czy na ostatnej stronie (Order confirmation) znajduje się napis "YOUR ORDER IS CONFIRMED"
