@@ -1,0 +1,4 @@
+Wykonaj test w serwisie https://dummy.restapiexample.com
+
+Utwóż nowego użytkownika (wyślij POST z modelem danych na adres /api/v1/create ) a następnie sprawdź czy jest on dostępny na liście (GET na adres /api/v1/employees)
+Zastosuj builder w modelach danych

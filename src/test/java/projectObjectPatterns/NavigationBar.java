@@ -14,7 +14,7 @@ public class NavigationBar {
 
     ChromeDriver driver;
 
-    @FindBy(xpath = "//a[contains(.,\"  Stationery\")]")
+    @FindBy(css = "#category-7 a")
     private WebElement stationery;
 
     public NavigationBar(){
@@ -35,22 +35,20 @@ public class NavigationBar {
 
     public void openAccessoriesHome(){
         moveToElement("//a[contains(.,\"  Accessories\")]");
-        driver.findElement(By.xpath("//a[contains(.,\"Home Accessories\")]")).click();
+        driver.findElement(By.cssSelector("#category-8 a")).click();
     }
 
     public void openClothesMen(){
         moveToElement("//a[contains(.,\"  Clothes\")]");
-        driver.findElement(By.xpath("//div[@class=\"popover sub-menu js-sub-menu collapse\"]" +
-                "//li/a[contains(.,\"Men\")]")).click();
+        driver.findElement(By.cssSelector("#category-4 a")).click();
     }
     public void openClothesWomen() {
         moveToElement("//a[contains(.,\"  Clothes\")]");
-        driver.findElement(By.xpath("//div[@class=\"popover sub-menu js-sub-menu collapse\"]" +
-                "//li/a[contains(.,\"Women\")]")).click();
+        driver.findElement(By.cssSelector("#category-5 a")).click();
     }
 
     public void openArt(){
-        driver.findElement(By.xpath("//ul[@id=\"top-menu\"]/li/a[contains(.,\"Art\")]")).click();
+        driver.findElement(By.cssSelector("category-9")).click();
     }
     public void openLoginPage(){
         driver.findElement(By.xpath("//a[@title=\"Log in to your customer account\"]")).click();
@@ -61,12 +59,8 @@ public class NavigationBar {
     }
 
     public void openCart(){
-//        if (driver.findElements(By.xpath("//div[@class=\"header\"]/a")).size() > 0){
         driver.findElement(By.cssSelector(".blockcart")).click();
-//        }
-//        else{
-//            System.exit(0);
-//        }
+
     }
 
     public void selectLanguage(String language){
