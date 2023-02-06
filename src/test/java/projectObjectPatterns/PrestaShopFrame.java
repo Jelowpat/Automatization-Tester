@@ -24,10 +24,6 @@ public class PrestaShopFrame {
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
         WebElement element = driver.findElement(By.cssSelector("#framelive"));
         driver.switchTo().frame(element);
-
-//        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
-//        WebElement iframe = driver.findElement(By.cssSelector("#framelive"));
-//        return iframe.getAttribute("src");
     }
 
 }
