@@ -17,70 +17,72 @@ public class NavigationBar {
     @FindBy(css = "#category-7 a")
     private WebElement stationery;
 
-    public NavigationBar(){
+    public NavigationBar() {
         this.driver = getDriver();
-        PageFactory.initElements(getDriver(),this);
+        PageFactory.initElements(getDriver(), this);
     }
 
-    private void moveToElement(String element){
+    private void moveToElement(String element) {
         new Actions(driver)
                 .moveToElement(driver.findElement(By.xpath(element)))
                 .perform();
     }
 
-    public void openAccessoriesStationery(){
+    public void openAccessoriesStationery() {
         moveToElement("//a[contains(.,\"  Accessories\")]");
         stationery.click();
     }
 
-    public void openAccessoriesHome(){
+    public void openAccessoriesHome() {
         moveToElement("//a[contains(.,\"  Accessories\")]");
         driver.findElement(By.cssSelector("#category-8 a")).click();
     }
 
-    public void openClothesMen(){
+    public void openClothesMen() {
         moveToElement("//a[contains(.,\"  Clothes\")]");
         driver.findElement(By.cssSelector("#category-4 a")).click();
     }
+
     public void openClothesWomen() {
         moveToElement("//a[contains(.,\"  Clothes\")]");
         driver.findElement(By.cssSelector("#category-5 a")).click();
     }
 
-    public void openArt(){
-        driver.findElement(By.cssSelector("category-9")).click();
+    public void openArt() {
+        driver.findElement(By.cssSelector("#category-9 a")).click();
     }
-    public void openLoginPage(){
+
+    public void openLoginPage() {
         driver.findElement(By.xpath("//a[@title=\"Log in to your customer account\"]")).click();
     }
 
-    public void openContactUs(){
+    public void openContactUs() {
         driver.findElement(By.cssSelector("#contact-link > a")).click();
     }
 
-    public void openCart(){
+    public void openCart() {
         driver.findElement(By.cssSelector(".blockcart")).click();
 
     }
 
-    public void selectLanguage(String language){
+    public void selectLanguage(String language) {
         String xpath = String.format("//a[contains(text(), \"%s\")]", language);
         driver.findElement(By.cssSelector(".language-selector")).click();
         driver.findElement(By.xpath(xpath)).click();
     }
 
-    public void searchFor(String query){
+    public void searchFor(String query) {
         var searchBar = driver.findElement(By.xpath("//input[@name=\"s\"]"));
         searchBar.clear();
         searchBar.sendKeys(query);
         searchBar.sendKeys(Keys.RETURN);
     }
 
-    public void openYourAccount(){
+    public void openYourAccount() {
         driver.findElement(By.cssSelector(".account > span")).click();
     }
 
-    public void openMyStore(){
+    public void openMyStore() {
         driver.findElement(By.cssSelector("#_desktop_logo a")).click();
     }
 

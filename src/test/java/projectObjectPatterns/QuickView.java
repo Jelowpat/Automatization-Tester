@@ -1,5 +1,6 @@
 package projectObjectPatterns;
 
+import data.Size;
 import org.junit.jupiter.api.Assertions;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
@@ -53,13 +54,9 @@ public class QuickView {
         PageFactory.initElements(getDriver(), this);
     }
 
-    public void setSize(String size){
-        switch (size.toLowerCase()){
-            case "s" -> new Select(this.size).selectByValue("1");
-            case "m" -> new Select(this.size).selectByValue("2");
-            case "l" -> new Select(this.size).selectByValue("3");
-            case "xl" -> new Select(this.size).selectByValue("4");
-        }
+    public void setSize(Size size){
+        new Select(this.size).selectByValue(size.getValue());
+
     }
 
     public void setQuantity(Integer number){

@@ -2,6 +2,7 @@ package myPrestaShopTests;
 
 import data.LoginDataModel;
 import data.RegistrationDataModel;
+import data.Size;
 import org.junit.jupiter.api.AfterAll;
 import org.junit.jupiter.api.Assertions;
 import projectObjectPatterns.*;
@@ -60,7 +61,7 @@ public class PageObjectPatternTests extends BaseTest{
 
         productGrid.openQuickView("Hummingbird");
 
-        quickView.setSize("M");
+        quickView.setSize(Size.M);
         quickView.setQuantity(3);
         quickView.clickAddToCart();
         Assertions.assertEquals("\uE876Product successfully added to your shopping cart",
